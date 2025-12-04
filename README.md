@@ -1,6 +1,6 @@
 # RAG-Guard: Secure Retrieval-Augmented QA with Guardrails AI
 
-In this project, we use **[Guardrails AI](https://guardrails.ai/)** for enforcing strict validation rules in a Retrieval-Augmented Generation (RAG) pipeline. It is designed for AI engineers who want robust output control, ensuring responses are on-topic, accurate, and compliant with domain rules.
+In this project, we use **[Guardrails AI](https://guardrailsai.com/)** for enforcing strict validation rules in a Retrieval-Augmented Generation (RAG) pipeline. It is designed for AI engineers who want robust output control, ensuring responses are on-topic, accurate, and compliant with domain rules.
 
 
 ## What This Project Does
@@ -36,19 +36,21 @@ conda activate rag-guard-env
 conda deactivate
 ```
 
-**Environment Setup**
-4. Create a .env file:
+**Environment Setup**  
+4. Create a .env file:  
 ```bash
 OPENAI_API_KEY=your_api_key_here
 ```
 
-**Start Guardrails Server**
-5. Start a standalone guardrails server 
-Prior to that you need to create a Guardrails account and set up an API key
+**Start Guardrails Server**  
+5.  Start a standalone guardrails server  
+Prior to that you need to create a Guardrails account and set up an API key  
 
-5.1 Visit **[Guardrails AI]([https://guardrailsai.com/)]** to create an account.
-Obtain your Guardrails API key.
+5.1   Visit **[Guardrails AI](https://guardrailsai.com/)** to create an account.  
+      Obtain your Guardrails API key.  
+
 5.2 Configure Guardrails with your API key
+
 ```bash
 guardrails configure
 ```
@@ -61,7 +63,7 @@ This launches your guards at:
 ```bash
 http://127.0.0.1:8000/guards
 ```
-**Run the RAG Application**
+**Run the RAG Application**  
 6. Run the guarded application 
 ```bash
 python main.py
