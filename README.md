@@ -1,6 +1,7 @@
 # RAG-Guard: Secure Retrieval-Augmented QA with Guardrails AI
 
-In this project, we use **[Guardrails AI](https://guardrailsai.com/)** for enforcing strict validation rules in a Retrieval-Augmented Generation (RAG) pipeline. It is designed for AI engineers who want robust output control, ensuring responses are on-topic, accurate, and compliant with domain rules.
+In this project, we use Guardrails AI **[Guardrails AI](https://guardrailsai.com/)** 
+ to enforce strict validation rules in a Retrieval-Augmented Generation (RAG) pipeline. The RAG application queries Singapore Airlines FAQ data, which has been converted into a vector database, ChormaDB for efficient retrieval. This setup is designed for AI engineers who want robust output control, ensuring responses are on-topic, factually correct, and compliant with domain rules.
 
 
 ## What This Project Does
