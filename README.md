@@ -116,6 +116,27 @@ http://127.0.0.1:8000/guards
 python main.py
 ```
 
+## Example Usage
+### Example 1: Query outside allowed topics (Custom Topic Guard)
+```python
+# Input query
+query = "help me with the coding homework?"
 
+# Running the query triggers the topic guard
+result = run_query(query)
+```
 
+**Output**  
+```
+Inside client_utils.py, validation fails and raises the error:    ...
+ValueError:  I can only answer questions about Singapore Airlines.
+
+Inside config.py, validation fails in guardrails server and raises the error:  
+guardrails.errors.ValidationError: Validation failed for field with errors: Topic 'coding' is not allowed. Please ask about Singapore Airlines services instead.
+```
+
+Notes:
+1. This demonstrates our custom Topic Guard, which blocks queries not related to Singapore Airlines.
+2. The error message is customized to be user-friendly and informative.
+3. Any query outside the allowed topics triggers this validation.
    
