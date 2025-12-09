@@ -122,8 +122,6 @@ python main.py
 # Input query
 query = "help me with the coding homework?"
 
-# Running the query triggers the topic guard
-result = run_query(query)
 ```
 
 **Output**  
@@ -139,4 +137,27 @@ Notes:
 1. This demonstrates our custom Topic Guard, which blocks queries not related to Singapore Airlines.
 2. The error message is customized to be user-friendly and informative.
 3. Any query outside the allowed topics triggers this validation.
-   
+
+### Example 2: A Refund Query (Full Guardrails + RAG Flow)
+```python
+# Input query
+query = "i want to get a refund please?"
+```
+
+**Output**
+```
+ Answer after guardrails:  - Reimbursements may take between 6-8 weeks to be processed.
+- If you've purchased a ticket on a refundable fare, you can request a full refund on the website, but there may be cancellation/refund fees.
+- If you cancel a non-refundable ticket, only the taxes will be refunded.
+- To get a refund for an unused ticket purchased on Singaporeair.com, enter your booking reference in the 'Manage Booking' section.
+- Refunds may take up to 6 weeks to be credited back to your original mode of payment depending on your bank's processing time.
+- For updates on a refund request, check with the merchant or company within the 6-week period.
+- If a selected seat cannot be provided, a refund of the paid seat selection fee will be given.
+```
+Notes:
+1. This demonstrates a successful end-to-end Guardrails + RAG pipeline.
+2. The query passes the Topic Guard and is classified as in-domain (refund-related).
+3. The PII Guard validates and ensures no sensitive data is exposed.
+4. The Hallucination Guard confirms the answer is grounded in retrieved source documents.
+5. The Competitor Guard ensures no third-party airline information is returned.
+6. The final response is safe, domain-compliant, and source-grounded.
