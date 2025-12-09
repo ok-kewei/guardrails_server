@@ -156,8 +156,11 @@ query = "i want to get a refund please?"
 ```
 Notes:
 1. This demonstrates a successful end-to-end Guardrails + RAG pipeline.
-2. The query passes the Topic Guard and is classified as in-domain (refund-related).
-3. The PII Guard validates and ensures no sensitive data is exposed.
-4. The Hallucination Guard confirms the answer is grounded in retrieved source documents.
-5. The Competitor Guard ensures no third-party airline information is returned.
-6. The final response is safe, domain-compliant, and source-grounded.
+2. The query passes the Topic Guard and is classified as in-domain (refund-related).  
+   From Guardrails server terminal:  
+   Matched Topic:  refund  
+   Valid topic verified:  refund  
+4. The PII Guard validates and ensures no sensitive data is exposed.
+5. The Hallucination Guard confirms the answer is grounded in retrieved source documents.
+6. The Competitor Guard ensures no third-party airline information is returned.
+7. The final response is safe, domain-compliant, and source-grounded.
